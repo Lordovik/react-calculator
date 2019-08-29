@@ -1,0 +1,11 @@
+.calc-input {
+  grid-column: 1 / -1;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.calc-input-span {
+  direction: rtl;
+  text-align: left;
+  float: right;
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.calc {
+  position: absolute;
+  left: calc(50% - 400px / 2);
+  top: 100px;
+  width: 283px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 50px 50px 1fr;
+  border: 1px solid grey;
+  grid-gap: 1px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.btn {
+  font-size: 2rem;
+  width: 70px;
+  height: 70px;
+  border: none;
+}

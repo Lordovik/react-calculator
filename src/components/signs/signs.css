@@ -1,0 +1,8 @@
+.signs {
+  display: grid;
+  grid-template-rows: repeat(4, 70px);
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 1px;
+}

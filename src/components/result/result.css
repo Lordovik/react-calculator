@@ -1,0 +1,7 @@
+.result {
+  grid-column: 1 / -1;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: end;
+}
