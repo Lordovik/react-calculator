@@ -17,8 +17,29 @@ export default class App extends React.Component {
 
     this.setResult = (btn) => {
       if (signsString.some((item) => item === btn)) {
-        const res = this.state.inputValue;
-        this.setState({inputValue: "0", result: res, sign: btn});
+        const currRes = this.state.result;
+        const input = this.state.inputValue;
+        const currSign = this.state.sign;
+        let newRes = "";
+        switch (currSign) {
+          case "+":
+            newRes = +currRes + +input;
+            break;
+          case "-":
+            newRes = +currRes - +input;
+            break;
+          case "*":
+            newRes = +currRes * +input;
+            break;
+          case "/":
+            newRes = +currRes / +input;
+            break;
+          case "=":
+          case  "":
+            newRes = input;
+            break;
+        }
+        this.setState({inputValue: "0", result: newRes, sign: btn});
       }
     }
 
@@ -44,10 +65,11 @@ export default class App extends React.Component {
         this.putNumber(btn);
       else if (btn === "c")
         this.putNumber("Backspace");
-      else if (signsString.some((item) => item === btn))
+      else if (signsString.some((item) => item === btn)) {
         this.setResult(btn);
       }
     }
+  }
 
   render() {
     const val = this.state.inputValue;
